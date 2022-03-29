@@ -3,7 +3,7 @@ from django.http import StreamingHttpResponse
 from wsgiref.util import FileWrapper
 import mimetypes
 import os
-# from django.contrib import messages
+from django.core.mail import send_mail
 # Create your views here.
 
 def Home(request):
