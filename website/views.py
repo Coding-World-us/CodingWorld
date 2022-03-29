@@ -9,33 +9,6 @@ from django.core.mail import send_mail
 def Home(request):
     return render(request , 'Home.html')
 
-def Contact(request):
-    if request.method == 'POST':
-        name = request.POST.get('full-name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject')
-        message_list = request.POST.get('message')
-
-        data = {
-            'name' : name , 
-            'email' : email , 
-            'subject' : subject ,
-            'message' : message_list
-        }
-
-        message = f'''
-            Full Name : {name}
-
-            Email : {email}
-
-            Subject : {subject}
-            
-            Message : {message_list}
-        '''.format(data['name'] , data['email'] , data['subject'] , data['message'])
-
-        send_mail(data['subject'] , message ,'' ,  ['codingworld412@gmail.com'])
-    return render(request , "Contact.html")
-
 def About(request):
     return render(request , "About.html")
 
