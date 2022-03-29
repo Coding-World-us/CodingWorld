@@ -3,8 +3,6 @@
 
 <title>Python Tutorial 2</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <iframe class="video_1" src="https://youtube.com/embed/jSAunyN5kdw" allowfullscreen></iframe>
 
 <p class="para">
@@ -131,7 +129,6 @@
 </p>
 <br><code id="code" class="code">
     print("Hello World !")
-    <button class="fa fa-clone" id="fa fa-clone" onclick="copy()"></button>
 </code><br><br>
 
 <b><p class="info">Click "Download" to get the above Summary as PDF along with the code. It is absolutely free !</p></b>
@@ -222,17 +219,5 @@
         .download_btn{
             font-size: 51px;
         }
-        .fa fa-clone{
-            display: none;
-        }
     }
 </style>
-
-<script>
-    function copy(){
-    const text = document.getElementById('code')
-    const value = text.innerText
-    navigator.clipboard.writeText(value)
-    alert("Copied !")
-}
-</script>
