@@ -9,9 +9,6 @@ from django.core.mail import send_mail
 def Home(request):
     return render(request , 'Home.html')
 
-def Contact(request):
-    return render(request , 'Contact.html')
-
 def About(request):
     return render(request , "About.html")
 
