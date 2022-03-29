@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% include "Header.html" %}
+<html>
+  <head>
+    <title>Home | CodingWorld</title>
+  </head>
+
+  <p class="welcome_msg">&ensp; &ensp; Welcome to</p>
+  <b><p class="title_msg">CodingWorld</p></b>
+
+  <p class="welcome_para">CodingWorld is a Youtube Channel that will provide you the best content related to programming. Click on Explore Playlists Button to browse our ongoing Course(s).</p>
+
+  <p class="welcome_para_responsive">CodingWorld is a Youtube Channel that will provide you the best content related to programming. Click on Explore Playlists Button to browse our ongoing Course(s).</p>
+  
+  <div class="btns">
+    <a href="/playlists" class="playlist_btn">Explore Courses</a>
+  </div>
+
+  <style>
+    .welcome_msg{
+      display: inline-block;
+      margin-top: 0.5vw;
+      font-size: 3vw;
+      color: black;
+    }
+    .title_msg{
+      display: inline-block;
+      margin-top: 1vw;
+      font-size: 3vw;
+      color: blue;
+      margin-left: 10px;
+      z-index: -1;
+    }
+    .welcome_para{
+      font-size: 2vw;
+      margin-left: 4.6vw;
+      color: #808080;
+      z-index: -1;
+      margin-bottom: 60px;
+    }
+    .welcome_para_responsive{
+      display: none;
+      color: #808080;
+      margin-left: 10px;
+    }
+    .playlist_btn{
+      margin-left: 600px;
+    }
+    .btns a{
+      text-decoration: none;
+      font-size: 21px;
+      background-color: gray;
+      color: black;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .btns a:hover{
+      background-color: lightgray;
+      padding: 14px;
+    }
+    @media screen and (max-width: 1024px) {
+      .welcome_msg{
+      font-size: 6vw;
+      color: black;
+      text-align: center;
+      padding-right: -6vw;
+      margin-top: 60px;
+      margin-left: 14px;
+      }
+      .title_msg{
+      font-size: 6vw;
+      color: blue;
+      text-align: center;
+      }
+      .welcome_para{
+        display: none;
+      }
+      .welcome_para_responsive{
+        display: block;
+        font-size: 5vw;
+      }
+      .playlist_btn{
+        font-size: 21px;
+        margin-left: 82px;
+        margin-top: 510px;
+      }
+      
+    }
+  </style>
+</html>

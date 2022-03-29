@@ -1,0 +1,132 @@
+{% include "Header.html" %}
+
+<head>
+    <title>Contact | CodingWorld</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="post" class="contact-form"> {% csrf_token %}
+
+        <div class="form-control">
+            <div class="tag">Full name</div>
+            <input type="text" name="full-name" required>
+        </div>
+
+        <div class="form-control">
+            <div class="tag">Email</div>
+            <input type="text" name="email" required>
+        </div>
+
+        <div class="form-control">
+            <div class="tag">Subject</div>
+            <input type="text" name="subject" required>
+        </div>
+
+        <div class="form-control">
+            <div class="tag">Message</div>
+            <textarea name="message" cols="30" rows="5" class="message_area" required></textarea>
+        </div>
+
+        <div class="form-control">
+            <input type="Submit" class="btn_submit">
+        </div>
+
+        </form>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    <h4 style="color: black;">{{message}}</h4>
+    {% endfor %}
+    {% endif %}
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .heading{
+        margin-top: -600px;
+        text-align: center;
+    }
+    .para{
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .contact-form{
+        width: 250px;
+        margin-left: 110px;
+    }
+
+    input , textarea{
+        width: 100%;
+        background-color: lightblue;
+        border: none;
+        padding: 0.5rem;
+    }
+
+    input:focus , textarea:focus{
+        outline: none;
+    }
+
+    .tag{
+        padding: 5px 0;
+        font-size: 23px;
+        
+        background-color: steelblue;
+    }
+
+    .container{
+        background-color: steelblue;
+        padding: 1rem;
+        border-radius: 10px;
+        overflow: none;
+        margin-left: 500px;
+        margin-right: 500px;
+        margin-top: 42px;
+    }
+    .btn_submit{
+        background-color: lightslategray;
+        border: none;
+        width: 100%;
+        padding: 1rem;
+        margin-top: -10px;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .btn_submit:hover{
+        background-color: slategrey;
+    }
+    .message_area{
+        resize: none;
+    }
+    h4{
+        text-align: center;
+        margin-top: 14px;
+    }
+    @media screen and (max-width: 1024px) {
+        .heading{
+            font-size: 21px;
+        }
+        .para{
+            margin-left: 10px;
+            font-size: 18px;
+        }
+        .container{
+            margin-left: 10px;
+            width: 340px;
+            margin-right: 10px;
+            margin-top: 82px;
+        }
+        .contact-form{
+            margin-left: 14px;
+        }
+    }
+</style>
