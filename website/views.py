@@ -60,10 +60,10 @@ def video_2(request):
     response['Content-Disposition'] = "Attachment ; filename = %s" % filename
     return response
 
-def Python_Video_4(request):
+def Python_Video_3(request):
     return render(request , "Python_Video_4.html")
 
-def video_4(request):
+def video_3(request):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     filename = '004_Python_Tutorial_4.zip'
     filepath = base_dir + '/Templates/' + filename
