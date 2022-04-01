@@ -61,11 +61,11 @@ def video_2(request):
     return response
 
 def Python_Video_3(request):
-    return render(request , "Python_Video_4.html")
+    return render(request , "Python_Video_3.html")
 
 def video_3(request):
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    filename = '004_Python_Tutorial_4.zip'
+    filename = '003_Python_Tutorial_3.zip'
     filepath = base_dir + '/Templates/' + filename
     thefile = filepath
     filename = os.path.basename(thefile)
