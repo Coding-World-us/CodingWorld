@@ -30,4 +30,6 @@ urlpatterns = [
     path('file-1' , views.video_1),
     path('python-tutorial-2' , views.Python_Video_2),
     path('file-2' , views.video_2),
+    path('python-tutorial-3' , views.Python_Video_3),
+    path('file-3' , views.video_3),
 ] + static(settings.STATIC_URL , document_root = settings.STATIC_ROOT)
